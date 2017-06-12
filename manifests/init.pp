@@ -45,7 +45,7 @@ class roundcube (
 ) inherits roundcube::params {
   package { $package_name: ensure => installed }
   file { $configfile:
-    require => package[$package_name],
+    require => Package[$package_name],
     content => template($template),
   }
 }
